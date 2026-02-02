@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/track",
+      "dest": "/api/track"
+    },
+    {
+      "src": "/api/checkout",
+      "dest": "/api/checkout"
+    },
+    {
+      "src": "/api/webhooks/stripe",
+      "dest": "/api/webhooks/stripe"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
